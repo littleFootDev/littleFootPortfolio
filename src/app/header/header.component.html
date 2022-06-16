@@ -1,1 +1,29 @@
-<p>header works!</p>
+<nav>
+    <a 
+        class="nav-icon"
+        aria-label="visit homepage"
+        aria-current="page"
+    >
+    <img src="../../assets/images/littleFootLogo.jpeg" alt="littleFootLogo">
+    <span>Caradi Jacques</span>
+    </a>
+    <div class="main-navlinks">
+        <button (click)="toggleNav()" class="hamburger" type="button"
+        [ngClass]="{ open : navIsOpen}"
+        aria-label="Toglle navigation"
+        aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="navlinks-container open" [ngClass]="{ open : navIsOpen}">
+            <a aria-current="page">Home</a>
+            <a>About-me</a>
+            <a>Portfolio</a>
+            <a>Contact</a>
+        </div>
+    </div>
+
+    
+</nav>
